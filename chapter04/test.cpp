@@ -1,15 +1,33 @@
 #include "../std_lib_facilities.h"
 
+bool isprime(vector<int>& primes, int number);  // Pass the vector by reference
+
 int main() {
 
-    // has to choose random index from 0 - 2
-    std::time_t seed = std::time(nullptr);
+    vector<int> primes;
+    primes.push_back(2);  // Use push_back to add elements to the vector
+    int number = 1;
 
-    // Use a simple algorithm to generate a pseudo-random number
-    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+    for (number = 3; number <= 100; ++number) {  // Start from 3 since 2 is already in primes
 
-    // Generate a random number between 0 and 2
-    int random_number = seed % 3;
+        if (isprime(primes, number)) {
+            primes.push_back(number);
+        }
+    }
 
-    cout << random_number;
+    for (int i = 0; i < primes.size(); ++i) {
+        cout << primes[i] << " ";
+    }
+    cout << "\n";
+    return 0;
+}
+
+bool isprime(vector<int>& primes, int number) {
+    // check if number is in the list of primes
+    for (int i = 0; i < primes.size(); ++i) {
+        if (number % primes[i] == 0) {
+            return false;  // number is divisible by an existing prime, not a prime
+        }
+    }
+    return true;  // number is not divisible by any existing primes, is a prime
 }
