@@ -1,3 +1,7 @@
+/*
+    Modify the program in exercise11 to take an input value max and then find all prime numbers from 1 to max.
+*/
+
 #include "../std_lib_facilities.h"
 
 

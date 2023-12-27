@@ -1,8 +1,9 @@
-#include "../std_lib_facilities.h"
-#include "../find_median.cpp"
+/*
+    Fix the program in SECTION 4.6.3 so that it always prints out a median.
+*/
 
-//compute median
-//if there are two middle elements, the function calculates the middle of either side.
+#include "../std_lib_facilities.h"
+
 
 int main() {
 

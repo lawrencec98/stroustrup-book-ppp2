@@ -1,3 +1,7 @@
+/*
+    Write a program to solve quadratic equations.
+*/
+
 #include "../std_lib_facilities.h"
 
 
