@@ -1,3 +1,7 @@
+/*
+    Write a program that finds the min, max, and mode of a sequence of strings.
+*/
+
 #include "../std_lib_facilities.h"
 
 

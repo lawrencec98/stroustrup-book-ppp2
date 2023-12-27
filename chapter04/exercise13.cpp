@@ -1,3 +1,8 @@
+/*
+    Create a program to find all the prime numbers between 1 and 100. There is a classic method for doing this, called the "Sieve of Eratosthenes". Write your program using this
+    method.
+*/
+
 #include "../std_lib_facilities.h"
 
 
