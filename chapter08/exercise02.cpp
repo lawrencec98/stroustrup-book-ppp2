@@ -1,3 +1,8 @@
+/*
+    Write a function print() that prints a vector of ints to cout. Give it two arguments: a string for "labelling" the output and a vector.
+*/
+
+
 #include "../std_lib_facilities.h"
 #include "my.h"
 
