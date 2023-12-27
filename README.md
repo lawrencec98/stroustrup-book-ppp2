@@ -1,5 +1,4 @@
-# Bjarne Stroustrup's Programming Principles and Practice using C++
+# stroustrup-book-ppp2
 
-This repository is used to store the programs I write as part of the drills and exercises included in this book.
+This repository contains end-of-chapter drills and exercises from Bjarne Stroustup's [Programming Principles and Practice Using C++ (Second Edition)] (https://www.stroustrup.com/programming.html)
 
-I started this book on the 19th of December 2023.
