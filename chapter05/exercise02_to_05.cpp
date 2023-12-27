@@ -1,3 +1,7 @@
+/*
+    Write a program that converts from Celsius to Kelvin, and vice versa.
+*/
+
 #include "../std_lib_facilities.h"
 
 double ctok(double temp)

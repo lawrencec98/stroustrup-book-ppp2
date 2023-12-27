@@ -1,3 +1,8 @@
+/*
+    Write a program that reads and stores a series of integers and then computes the sum of the first N integers. First ask for N, then read the values into a vector,
+    then calculate the sum of the first N values.
+*/
+
 #include "../std_lib_facilities.h"
 
 
