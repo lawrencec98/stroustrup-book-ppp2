@@ -1,9 +1,5 @@
 /*
-    Design and implement a Name_pairs class holding (name, age) pairs where name is a string and age is a double. Represent that as a vector<string> (called name), and
-    a vector<double> (called age) member. Provide an input operation read_names() that reads a series of names. Provide a read_ages() operation that prompts the user
-    for an age for each name. Provide a print() operation that prints out the (name[i], age[i]) pairs (one per line) in the order determined by the name vector. Provide a
-    sort() operation that sorts the name vector in alphabetical order and reorganizes the age vector to match. Implement all "operations" as member functions. Test the
-    class.
+    Replace Name_pair::print() with a (global) operator << and define == and != for Name_pairs.
 */
 
 #include "../std_lib_facilities.h"
@@ -15,6 +11,8 @@ public:
     void read_ages();   // input operation
     void print();
     void sort();        // sorts the name vector in alphabetical order, and reorganizes age vector to match
+    const vector<string> &get_name() const {return name;}
+    const vector<double> &get_age() const {return age;}
 private:
     vector<string> name;
     vector<double> age;
@@ -59,4 +57,24 @@ void Name_pairs::print() {
     for (int i = 0; i < name.size(); i++) {
         cout << name[i] << ", " << age[i] << '\n';
     }
+}
+
+
+bool operator==(const Name_pairs &a, const Name_pairs &b) {
+    return a.get_name() == b.get_name()
+    && a.get_age() == b.get_age();
+}
+
+
+bool operator!=(const Name_pairs &a, const Name_pairs &b) {
+    return !(a==b);
+}
+
+
+ostream &operator<<(ostream &os, const Name_pairs &thing) {
+     
+    for (int i = 0; i<thing.get_name().size(); ++i) {
+        os << '(' << thing.get_name()[i] << ',' << thing.get_age()[i] << ')' << '\n';
+    }
+    return os;
 }
