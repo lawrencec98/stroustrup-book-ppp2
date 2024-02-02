@@ -25,8 +25,7 @@ void check_heap() {
 
     char* array1 = new char[3] {'a','b','c'};
 
-    std::cout << "Heap memory allocation: ";
-
+    std::cout << "Heap memory allocation:\t\t";
     for(int i = 0; i < 3; i++) {
         std::cout << static_cast<void*>(array1) << ' ';
         ++array1;
@@ -39,7 +38,7 @@ void check_stack() {
     char array2[3] {'d', 'e', 'f'};
     char* p = &array2[0];
 
-    std::cout << "Stack memory allocation: ";
+    std::cout << "Stack addresses allocated by check_stack():\t";
 
     for(int i = 0; i < 3; i++) {
         std::cout << static_cast<void*>(p) << ' ';
@@ -48,7 +47,18 @@ void check_stack() {
 }
 
 
+
 int main() {
+
+    char my_array[3] {'d', 'e', 'f'};
+    char *p = &my_array[0];
+
+    std::cout << "first addresses allocated by main:\t";
+    for(int i = 0; i < 3; i++) {
+        std::cout << static_cast<void*>(p) << ' ';
+        ++p;
+    }
+    std::cout << std::endl;
 
     check_heap();
     std::cout << std::endl;
