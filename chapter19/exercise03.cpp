@@ -15,5 +15,24 @@ class Pair {
     public:
         Pair();
         Pair(T tt, U uu) : t_data(tt), u_data(uu) {};
-        
+        T gett();
+        U getu();
 };
+
+
+template<typename T, typename U>
+T Pair<T, U>::gett() {
+    return t_data;
+}
+
+
+template<typename T, typename U>
+U Pair<T, U>::getu() {
+    return u_data;
+}
+
+
+int main() {
+    Pair pi("pi", 3.14159);
+    std::cout << pi.gett() << " = " << pi.getu() << std::endl;
+}
