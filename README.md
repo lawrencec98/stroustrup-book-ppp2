@@ -3,7 +3,7 @@
 This repository contains end-of-chapter drills and exercises from Bjarne Stroustup's [Programming Principles and Practice using C++ Second Edition](https://www.stroustrup.com/programming.html)
 
 ## Motivation for creating this repository
-I started this textbook on December 18 2023, as my first introduction to C++.
+I started this textbook on December 18 2023, as my introduction to C++.
 
 Prior to this book I have been self-learning programming since October 2023, touching on foundational concepts in {Computer Science, C and Python}.
 
